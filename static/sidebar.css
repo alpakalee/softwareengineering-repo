@@ -1,0 +1,28 @@
+.sidebar {
+    background-color: var(--color-green-500);
+    width: 200px;
+    height: 100vh;
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: var(--font-size-b2);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-grey-900);
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}

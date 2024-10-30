@@ -21,5 +21,9 @@ app.register_blueprint(auth_bp, url_prefix='/auth')
 def index():
     return render_template("index.html")
 
+@app.route("/main")
+def main():
+    return render_template("base.html")
+
 if __name__ == "__main__":
     app.run(debug=True)  # HTTP로 실행

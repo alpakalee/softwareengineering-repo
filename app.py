@@ -25,5 +25,29 @@ def index():
 def main():
     return render_template("base.html")
 
+@app.route("/milestone")
+def milestone():
+    return render_template("milestone.html")
+
+@app.route("/userstory")
+def userstory():
+    return render_template("userstory.html")
+
+@app.route("/backlog")
+def backlog():
+    return render_template("backlog.html")
+
+@app.route("/sprint")
+def sprint():
+    return render_template("sprint.html")
+
+@app.route("/board")
+def board():
+    return render_template("board.html")
+
+@app.route("/review")
+def review():
+    return render_template("review.html")
+
 if __name__ == "__main__":
     app.run(debug=True)  # HTTP로 실행

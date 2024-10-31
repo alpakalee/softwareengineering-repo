@@ -1,12 +1,26 @@
 <div class="sidebar">
     <h2>A.T.M</h2>
     <ul>
-        <li><img src="{{ url_for('static', filename='icons/home.svg') }}" alt="메인 아이콘" class="icon"> 메인</li>
-        <li><img src="{{ url_for('static', filename='icons/milestone.svg') }}" alt="마일스톤 아이콘" class="icon"> 프로젝트 마일스톤</li>
-        <li><img src="{{ url_for('static', filename='icons/userstory.svg') }}" alt="유저스토리 아이콘" class="icon"> 유저스토리</li>
-        <li><img src="{{ url_for('static', filename='icons/backlog.svg') }}" alt="백로그 아이콘" class="icon"> 프로덕트 백로그</li>
-        <li><img src="{{ url_for('static', filename='icons/sprint.svg') }}" alt="스프린트 아이콘" class="icon"> 스프린트</li>
-        <li><img src="{{ url_for('static', filename='icons/board.svg') }}" alt="보드 아이콘" class="icon"> 스크럼 보드</li>
-        <li><img src="{{ url_for('static', filename='icons/review.svg') }}" alt="회고 아이콘" class="icon"> 스프린트 회고</li>
+        <li class="{% if request.path == '/main' %}active{% endif %}">
+            <a href="{{ url_for('main') }}"><img src="{{ url_for('static', filename='icons/home.svg') }}" alt="메인 아이콘" class="icon"> 메인</a>
+        </li>
+        <li class="{% if request.path == '/milestone' %}active{% endif %}">
+            <a href="{{ url_for('milestone') }}"><img src="{{ url_for('static', filename='icons/milestone.svg') }}" alt="마일스톤 아이콘" class="icon"> 프로젝트 마일스톤</a>
+        </li>
+        <li class="{% if request.path == '/userstory' %}active{% endif %}">
+            <a href="{{ url_for('userstory') }}"><img src="{{ url_for('static', filename='icons/userstory.svg') }}" alt="유저스토리 아이콘" class="icon"> 유저스토리</a>
+        </li>
+        <li class="{% if request.path == '/backlog' %}active{% endif %}">
+            <a href="{{ url_for('backlog') }}"><img src="{{ url_for('static', filename='icons/backlog.svg') }}" alt="백로그 아이콘" class="icon"> 프로덕트 백로그</a>
+        </li>
+        <li class="{% if request.path == '/sprint' %}active{% endif %}">
+            <a href="{{ url_for('sprint') }}"><img src="{{ url_for('static', filename='icons/sprint.svg') }}" alt="스프린트 아이콘" class="icon"> 스프린트</a>
+        </li>
+        <li class="{% if request.path == '/board' %}active{% endif %}">
+            <a href="{{ url_for('board') }}"><img src="{{ url_for('static', filename='icons/board.svg') }}" alt="보드 아이콘" class="icon"> 스크럼 보드</a>
+        </li>
+        <li class="{% if request.path == '/review' %}active{% endif %}">
+            <a href="{{ url_for('review') }}"><img src="{{ url_for('static', filename='icons/review.svg') }}" alt="회고 아이콘" class="icon"> 스프린트 회고</a>
+        </li>
     </ul>
 </div>
